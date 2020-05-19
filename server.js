@@ -24,9 +24,9 @@ let mailOptions = {
 
 transporter.sendMail(mailOptions, (err, data) => {
     if (err) {
-        res.send("Message Failed!!");
+        res.send("Error occurred !");
     }
-        res.send("Message successfully sent!");
+        res.send("Message successfully sent !");
 });
 })
 
