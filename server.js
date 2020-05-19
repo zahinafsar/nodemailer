@@ -17,16 +17,16 @@ let mailOptions = {
     from: 'afsarzahin2@gmail.com',
     to: 'afsarzahin@gmail.com',
     subject: 'Message from zahin nodemailer',
-    html:`<h3>Contact details :-</h3><br>
-    <h4> email : ${req.params.email} </h4><br>
-    <h4> message : ${req.params.text} </h4><br>`
+    html:`<h3>Contact details :-</h3>
+    <h4> email : ${req.params.email} </h4>
+    <h4> message : ${req.params.text} </h4>`
 }
 
 transporter.sendMail(mailOptions, (err, data) => {
     if (err) {
-        res.send("failed");
+        res.send("Message Failed!!");
     }
-    res.send("Email done!!!");
+        res.send("Message successfully sent!");
 });
 })
 
