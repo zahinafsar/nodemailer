@@ -17,10 +17,9 @@ let mailOptions = {
     from: 'afsarzahin2@gmail.com',
     to: 'afsarzahin@gmail.com',
     subject: 'Message from zahin nodemailer',
-    text: {
-           from: req.params.email,
-           message: req.params.text
-          };
+    html:`<h1>Contact details:</h1><br>
+    <h2> email:${req.params.email} </h2><br>
+    <h2> phonenumber:${req.params.text} </h2><br>`
 
 transporter.sendMail(mailOptions, (err, data) => {
     if (err) {
