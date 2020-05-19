@@ -3,7 +3,7 @@ const app = exp();
 const nodemailer = require('nodemailer');
 require('dotenv').config();
 
-app.post('/:email/:text', (req,res) => {
+app.get('/:email/:text', (req,res) => {
 
     let transporter = nodemailer.createTransport({
     service: 'gmail',
